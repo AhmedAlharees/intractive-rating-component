@@ -1,0 +1,170 @@
+@import "./reset";
+
+/*variabels*/
+$overpass: "Overpass", sans-serif;
+$fw-400: 400;
+$fw-700: 700;
+
+/*colors*/
+$clr--primary: hsl(25, 97%, 53%);
+$clr--White: hsl(0, 0%, 100%);
+$clr--Light--Grey: hsl(217, 12%, 63%);
+$clr--Medium--Grey: hsl(216, 12%, 54%);
+$clr--Dark--Blue: hsl(213, 19%, 18%);
+$clr--Very--Dark--Blue: hsl(216, 12%, 8%);
+body {
+  font-family: $overpass;
+  background-color: $clr--Very--Dark--Blue;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+  color: $clr--White;
+}
+
+.rating-card {
+  border-radius: 30px;
+  margin: 0 0.5rem;
+  max-width: 360px;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: $clr--Dark--Blue;
+  .star-image,
+  h2,
+  p {
+    margin-left: 1rem;
+  }
+}
+
+.star-image {
+  padding: 1rem;
+  background-color: $clr--Very--Dark--Blue;
+  margin-top: 1rem;
+}
+
+.fieldset {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[name="rate-value"] {
+  display: none;
+}
+
+label {
+  background-color: $clr--Very--Dark--Blue;
+  padding: 14px 22px;
+  border-radius: 50%;
+  transition: 0.3s;
+  color: $clr--Medium--Grey;
+  cursor: pointer;
+}
+
+label:hover {
+  background-color: $clr--Light--Grey;
+  color: $clr--White;
+}
+
+input[name="rate-value"]:checked + label {
+  background-color: $clr--primary;
+  color: $clr--White;
+}
+
+.sbmt-btn {
+  all: unset;
+  background-color: $clr--primary;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 30px;
+  font-weight: $fw-700;
+  font-size: 1.5;
+  text-align: center;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.sbmt-btn:hover {
+  background-color: $clr--White;
+  color: $clr--primary;
+}
+
+.thank-card {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  text-align: center;
+  max-width: 360px;
+  background-color: $clr--Dark--Blue;
+  padding: 1rem;
+  border-radius: 30px;
+  margin: 0 0.5rem;
+}
+
+.thank-card img {
+  margin: 1rem 0;
+  animation-name: rotate;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+/*utility*/
+.is-hidden {
+  display: none;
+  transition: display 0.4s;
+}
+
+.padding-1 {
+  padding: 0.5rem 1rem;
+}
+
+.margin-top-1 {
+  margin-top: 1rem;
+}
+
+.clr-text {
+  color: $clr--Light--Grey;
+}
+
+.border-50 {
+  border-radius: 50%;
+}
+
+.clr-bg {
+  background-color: $clr--Very--Dark--Blue;
+}
+
+.br-rad {
+  border-radius: 30px;
+}
+
+.clr-primary {
+  color: $clr--primary;
+}
+.margin-top {
+  margin-top: 1rem;
+}
+.margin-bottom {
+  margin-bottom: 1rem;
+}
